@@ -5,10 +5,8 @@ sys.path.insert(0, caffe_root + 'python')
 import numpy as np
 import lmdb
 import caffe
-import scipy.io as sio
 import random
-from scipy import misc
-import random
+import cv2
 
 data_root = '/media/data1/image/cambridge_landmarks'
 #data_prefix='KingsCollege'
@@ -55,8 +53,8 @@ for data_prefix in data_prefices:
         for i in r:
             if (count+1) % 100 == 0:
                 print 'Saving image: ', count+1
-            X = misc.imread(images[i])
-            X = misc.imresize(X, (341,256), interp='bicubic')
+            X = cv2.imread(images[i])
+            X = cv2.resize(X, (455,256))    # to reproduce PoseNet results, please resize the images so that the shortest side is 256 pixels
             X = np.transpose(X,(2,0,1))
             im_dat = caffe.io.array_to_datum(np.array(X).astype(np.uint8))
             im_dat.float_data.extend(poses[i])
@@ -66,4 +64,3 @@ for data_prefix in data_prefices:
             count = count+1
         
         env.close()
-
