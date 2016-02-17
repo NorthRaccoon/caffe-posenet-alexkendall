@@ -1,5 +1,5 @@
 #!/bin/sh
-CAFFE_ROOT=/home/jaehyun/github/caffe-posenet-alexgkendall
+CAFFE_ROOT=/home/jaehyun/github/caffe-posenet-alexkendall
 
 $CAFFE_ROOT/build/tools/compute_image_mean /media/data1/image/cambridge_landmarks/KingsCollege_train_lmdb /media/data1/image/cambridge_landmarks/KingsCollege_imagemean.binaryproto
 

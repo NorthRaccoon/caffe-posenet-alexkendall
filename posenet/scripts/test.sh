@@ -1,6 +1,6 @@
 #!/bin/sh
 
-CAFFE_ROOT=/home/jaehyun/github/caffe-posenet-alexgkendall
+CAFFE_ROOT=/home/jaehyun/github/caffe-posenet-alexkendall
 
 mkdir $CAFFE_ROOT/posenet/results
 

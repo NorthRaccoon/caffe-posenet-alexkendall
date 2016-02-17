@@ -12,7 +12,7 @@ import lmdb
 import random
 
 # Make sure that caffe is on the python path:
-caffe_root = '/home/jaehyun/github/caffe-posenet-alexgkendall/'  # Change to your directory to caffe-posenet
+caffe_root = '/home/jaehyun/github/caffe-posenet-alexkendall/'  # Change to your directory to caffe-posenet
 import sys
 sys.path.insert(0, caffe_root + 'python')
 
